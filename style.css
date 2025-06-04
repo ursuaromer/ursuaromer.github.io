@@ -71,23 +71,12 @@ header{
 /* -----------subsec2------------ */
 .flexbox{
     display: flex;
-    /* justify-content: center; */
-    width: 30%;  
+    justify-content: space-between;
+    width: 50%;
     margin-top: 100px;
-    border: 2px solid rebeccapurple;
-    height: 350px;
-    flex-direction: column;
     box-shadow: 0 0 3px grey;
     padding: 20px;
     border-radius: 10px;
-
-    
-
-
-
-    button{
-        width: 150px;
-    }
 }
 /* --------h3 y input-------- */
 .curso h4{
@@ -99,6 +88,48 @@ header{
     padding: 4px;
     font-family: var(--letra);
 }
-.curso select{
-    width: 150px;
+/* -----------tabla----------- */
+.caja1{
+    margin-top: 20px;
+    display:flex;
+    justify-content: left;
+    border: 1px solid black;
+    width: 60%;
+}
+.caja1 h3{
+    padding: 5px;
+    text-align: left;
+    padding-right: 40px;
+    border-left: 1px solid black;
+}
+
+.cajas{
+    width: 60%;
+    height: 30%;
+    display:grid;
+    justify-content: left;
+}
+.celdas{
+    width: 738px;
+    height: 30px;
+    padding-right: 40px;
+    border:1px solid black;
+}
+
+/* ------------footer----------- */
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: var(--oscuro);
+    color: white;
+    padding: 5px;
+    font-family: var(--letra);
+}
+/* -------autores-------- */
+footer{
+    font-family: var(--letra);
+    background-color: white;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 600;
 }
