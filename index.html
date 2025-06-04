@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulo De Notas</title>
 </head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">    
 
 <body>
+    <!-- Menu de prueba -->
     <header>
         <div class="menu">
             <a href="#">Inicio</a>
@@ -18,7 +19,9 @@
             <a href="#">Chat DSI</a>
         </div>
     </header>
+    <!-- Contenedor de Notas de Alumnos -->
     <div class="contenedor">
+        <!--  -->
         <div class="sec1">
             <div class="logo">
                 <img src="/imagenes/LOGO -DSI-2024.png" alt="">
@@ -28,26 +31,39 @@
                 <img src="/imagenes/Logo-final-Suiza-png-5.0.png" alt="">
             </div>
         </div>
-        <div class="flexbox">
-            <div class="curso">
+    <div class="container">
+        <h2 class="form-title">Consulta Académica</h2>
+        <form class="flexbox">
+            <div class="campo">
                 <h4>Ciclo:</h4>
-                <select name="" id="">
-                    <option value=""></option>
-                    <option value="">I</option>
-                    <option value="">II</option>
-                    <option value="">III</option>
-                    <option value="">IV</option>
-                    <option value="">V</option>
-                    <option value="">VI</option>
+                <select name="ciclo" id="ciclo" required>
+                    <option value="">Seleccionar ciclo</option>
+                    <option value="1">I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                    <option value="4">IV</option>
+                    <option value="5">V</option>
+                    <option value="6">VI</option>
                 </select>
             </div>
-            <div class="curso">
+            
+            <div class="campo">
                 <h4>DNI:</h4>
-                <input type="Dni">
+                <input 
+                    type="text" 
+                    name="dni" 
+                    id="dni" 
+                    placeholder="Ingrese su DNI" 
+                    pattern="[0-9]{8}" 
+                    maxlength="8"
+                    required
+                >
             </div>
-            <button> Consultar</button>
-          
-        </div>
+            
+            <button type="submit" class="btn-consultar">Consultar</button>
+        </form>
+    </div>
+
     </div>
 </body>
 
