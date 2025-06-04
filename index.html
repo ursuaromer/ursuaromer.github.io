@@ -28,20 +28,39 @@
                 <img src="/img/Logo-final-Suiza-png-5.0.png" alt="">
             </div>
         </div>
-        <div class="flexbox">
-            <div class="curso">
-                <h4>Curso:</h4>
-                <input type="Cursos">
+<div class="container">
+        <h2 class="form-title">Consulta Académica</h2>
+        <form class="flexbox">
+            <div class="campo">
+                <h4>Ciclo:</h4>
+                <select name="ciclo" id="ciclo" required>
+                    <option value="">Seleccionar ciclo</option>
+                    <option value="1">I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                    <option value="4">IV</option>
+                    <option value="5">V</option>
+                    <option value="6">VI</option>
+                </select>
             </div>
-            <div class="curso">
+            
+            <div class="campo">
                 <h4>DNI:</h4>
-                <input type="Dni">
+                <input 
+                    type="text" 
+                    name="dni" 
+                    id="dni" 
+                    placeholder="Ingrese su DNI" 
+                    pattern="[0-9]{8}" 
+                    maxlength="8"
+                    required
+                >
             </div>
-            <div class="curso">
-                <h4>Nombre Completo:</h4>
-                <input type="Nombres Completos">
-            </div>
-        </div>
+            
+            <button type="submit" class="btn-consultar">Consultar</button>
+        </form>
+    </div>
+
         <div class="caja1">
             <h3>cursos</h3>
             <h3>primera unidad</h3>
@@ -66,8 +85,7 @@
             <div class="celdas"></div>
             <div class="celdas"></div>
         </div>
-    </div>
-    <DIV>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quis, consequatur possimus eligendi error
+    <div class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quis, consequatur possimus eligendi error
         voluptate cumque quod veniam provident consequuntur hic. Rerum maxime culpa natus fugit illum enim repellat
         reiciendis.
         Voluptates rerum nesciunt consequatur veniam molestias non aperiam totam veritatis aspernatur natus, nostrum,
@@ -77,9 +95,10 @@
         necessitatibus natus, optio rerum a? Magnam deserunt atque est! Ad earum quidem quaerat atque?
         Deserunt id temporibus, sapiente laboriosam, eveniet quo mollitia pariatur optio necessitatibus, adipisci quas.
         Similique aspernatur possimus magnam quas dolore provident? Quisquam facere possimus dicta sed officiis tempore
-        quidem dolorem praesentium.</DIV>
+        quidem dolorem praesentium.</div>
+    </div>
     <div class="paginas">
-        <button class="saltador">SIGUIENTE</button>
+        <a href="pagina1/yes.html">SIGUIENTE</a>
     </div>
     <div class="footer">
         <h2>&copy;DERECHOS DE AUTOR DSI-SUIZA</h2>
