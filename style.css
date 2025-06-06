@@ -13,27 +13,63 @@
 }
 /* --------encabezado-------------- */
 header{
-    background-color: var(--oscuro);
+    background-image: url('/dsi.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin:0 auto;
+    border-radius: 0 0 10px 10px;
+    /* box-shadow: 0 0 3px grey; */
+    padding: 20px;
+    font-family: var(--letra);
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 3px grey;
-    padding: 10px;
+    background: linear-gradient(135deg, rgba(13, 94, 175, 0.7) 0%, rgba(6, 52, 116, 0.7) 100%);
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
 }
+
+.menu, .logo1 {
+    position: relative;
+    z-index: 2;
+}
+
 /* ------------------menu------------ */
-.select{
-    background-color: var(--medio);
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+.logo img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 50%;
 }
 .menu a:hover{
-    background-color:  var(--claro);
-    color: var(--oscuro);
-    transition: 0.9s ease;
+    background-color:  transparent;
+    color: var(--claro);
+    transition: 0.3s ease;
 }
 .menu a:focus{
-    background-color: var(--suave);
-    color: white;
+    background-color: transparent;
+    color: var(--claro);
     transition: 0.3s ease;
 }
 .menu a {
@@ -42,13 +78,15 @@ header{
     color: white;
     font-size: 1.3em;
     text-decoration: none;
+    text-align: center;
     font-family: var(--letra);
-    font-weight: 600;
+    font-weight: 550;
 }
+
 /* -------------contenedor------------- */
 .contenedor{
     width: 90vw;
-    border: 2px solid firebrick;
+    /* border: 2px solid firebrick; */
     margin-left: 5vw;
     display: flex;
     justify-content: center;
@@ -82,6 +120,7 @@ header{
         }
 
         .form-title {
+            font-family: var(--letra);
             text-align: center;
             color: #333;
             margin-bottom: 30px;
