@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/paginas/Consulta.css">
+  </head>
+  <body>
+    <div class="contenedor">
+      <!--  -->
+      <div class="sec1">
+        <div class="logo">
+          <img src="/imagenes/LOGO -DSI-2024.png" alt="" />
+        </div>
+        <h1>REPORTE DE NOTAS DE ALUMNOS</h1>
+        <div class="logo">
+          <img src="/imagenes/Logo-final-Suiza-png-5.0.png" alt="" />
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="form-title">Consulta Académica</h2>
+        <form class="flexbox">
+          <div class="campo">
+            <h4>Ciclo:</h4>
+            <select name="ciclo" id="ciclo" required>
+              <option value="">Seleccionar ciclo</option>
+              <option value="1">I</option>
+              <option value="2">II</option>
+              <option value="3">III</option>
+              <option value="4">IV</option>
+              <option value="5">V</option>
+              <option value="6">VI</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <h4>DNI:</h4>
+            <input
+              type="text"
+              name="dni"
+              id="dni"
+              placeholder="Ingrese su DNI"
+              pattern="[0-9]{8}"
+              maxlength="8"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-consultar">Consultar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
