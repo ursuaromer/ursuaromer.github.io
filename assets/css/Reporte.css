@@ -3,8 +3,16 @@
   margin: 0;
   padding: 0;
 }
+:root{
+    --oscuro:#003366;
+    --medio:#053474;
+    --suave:#0071a4;
+    --claro:#6cb7ef;
+    /* -------letra------- */
+    --letra: 'Segoe UI';
+}
 header{
-    background-image: url('/assets/image.png');
+    background-image: url('../assets/image.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
