@@ -13,7 +13,7 @@
 }
 /* --------encabezado-------------- */
 header{
-    background-image: url('/dsi.jpg');
+    background-image: url('assets/logo/dsi.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -171,8 +171,8 @@ header::before {
         }
 
         .btn-consultar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(90deg,var(--medio),var(--claro));
+            color: rgb(255, 255, 255);
             border: none;
             padding: 15px 30px;
             border-radius: 8px;
@@ -188,7 +188,7 @@ header::before {
         .btn-consultar:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+            background: linear-gradient(135deg, var(--oscuro),var(--medio));
         }
 
         .btn-consultar:active {
