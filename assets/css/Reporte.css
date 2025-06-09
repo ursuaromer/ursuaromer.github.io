@@ -101,14 +101,17 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:center;
   border-bottom: 2px solid #ddd;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .header img {
-  width: 60px;
+  width: 100px;
+  height: 100px;
+  margin: 0 700px 20px 0;
+  position: absolute;
 }
 
 .header h1 {
