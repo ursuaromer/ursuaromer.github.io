@@ -83,6 +83,10 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #333;
 }
+.Titulo{
+  text-align: center;
+  font-family: var(--letra);
+}
 
 .container {
   background-color: white;
