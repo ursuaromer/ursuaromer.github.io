@@ -172,7 +172,6 @@ header::before {
 
         .btn-consultar {
             background: linear-gradient(90deg,var(--medio),var(--claro));
-            color: rgb(255, 255, 255);
             border: none;
             padding: 15px 30px;
             border-radius: 8px;
@@ -183,6 +182,13 @@ header::before {
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+
+            /* Estilizacion del anchor dentro dek boton */
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+
+            }
         }
 
         .btn-consultar:hover {
