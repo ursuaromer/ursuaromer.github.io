@@ -1,0 +1,110 @@
+{%extends 'global/base.html'%}
+{# Extiende la plantilla base general que se encuentra en 'global/base.html' #}
+
+{%block title%}Inicio{%endblock%}
+{# Define el título de la página como "Inicio" (se mostrará en la pestaña del navegador) #}
+
+{%block sections%}
+<!-- Inicio del cuerpo de la página -->
+<body>
+
+    <!-- Enlace al archivo CSS personalizado para esta página -->
+    <link rel="stylesheet" href="../static/main/styles/pagina.css">
+
+    <!-- Contenedor principal del reporte -->
+    <div class="reporte-container">
+
+        <!-- Encabezado con el logo y título -->
+        <div class="header">
+            <img src="../static/main/assets/img/logo-dsi.png" alt="Logo del Sistema DSI" class="logo">
+            <!-- Imagen del logo del sistema DSI -->
+            <h1>Reporte de Alumnos</h1> <!-- Título de la sección -->
+        </div>
+
+        <!-- Contenido principal del reporte -->
+        <div class="reporte-content">
+
+            <!-- Tabla que contiene los datos de los alumnos -->
+            <table class="reporte-table">
+                <thead>
+                    <tr>
+                        <!-- Encabezados de la tabla -->
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Ciclo</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de ejemplo con datos estáticos -->
+
+                    <tr>
+                        <td>001</td>
+                        <td>Juan Pérez</td>
+                        <td>III</td>
+                        <td>16</td>
+                        <td>14</td>
+                        <td>18</td>
+                        <td>16.0</td> <!-- (16 + 14 + 18) / 3 -->
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>Ana Gómez</td>
+                        <td>II</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>19</td>
+                        <td>18.0</td> <!-- (18 + 17 + 19) / 3 -->
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Carlos Díaz</td>
+                        <td>I</td>
+                        <td>14</td>
+                        <td>16</td>
+                        <td>13</td>
+                        <td>14.33</td> <!-- (14 + 16 + 13) / 3 -->
+                    </tr>
+
+                    <tr>
+                        <td>004</td>
+                        <td>Laura Martínez</td>
+                        <td>IV</td>
+                        <td>17</td>
+                        <td>19</td>
+                        <td>18</td>
+                        <td>18.0</td> <!-- (17 + 19 + 18) / 3 -->
+                    </tr>
+
+                    <tr>
+                        <td>005</td>
+                        <td>Pedro Ruiz</td>
+                        <td>V</td>
+                        <td>19</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>18.0</td> <!-- (19 + 18 + 17) / 3 -->
+                    </tr>
+
+                </tbody>
+            </table>
+        </div> <!-- Fin de reporte-content -->
+    </div> <!-- Fin de reporte-container -->
+
+    <!-- Botón para volver al inicio -->
+    <div class="boton-regreso">
+        <a href="{{ url_for('main.index') }}">
+            <!-- Llama a la función 'main.index' en Flask para volver al inicio -->
+            <button type="button" class="btn-regreso">Volver al Inicio</button>
+        </a>
+    </div>
+
+</body>
+{%endblock%}
+
+

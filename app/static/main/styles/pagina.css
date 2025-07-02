@@ -1,0 +1,93 @@
+/* ====== Variables ====== */
+:root {
+    /* Paleta de colores base */
+    --color-primario: #1a4b8c;             /* Azul principal */
+    --color-primario-oscuro: #0d3a6e;      /* Azul más oscuro para efectos hover */
+    --color-primario-claro: #2a6ec6;       /* Azul claro para variantes */
+    --color-secundario: #f8f9fa;           /* Fondo claro o neutro */
+    --color-accento: #ff6b35;              /* Naranja, usado como color de acento */
+    --color-texto: #333;                   /* Color principal del texto */
+    --color-texto-claro: #6c757d;          /* Texto más suave o secundario */
+    --color-blanco: #ffffff;               /* Blanco puro */
+    --color-gris-claro: #e9ecef;           /* Gris claro para hover o fondo */
+    
+    /* Estética general */
+    --radio-borde: 8px;                    /* Bordes redondeados */
+    --sombra-caja: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    --transicion: all 0.3s ease;           /* Transición general suave */
+}
+
+/* ====== Reset rápido ====== */
+* {
+  box-sizing: border-box;  /* Incluir padding y border en el tamaño del elemento */
+  margin: 0;                /* Elimina márgenes por defecto */
+  padding: 0;               /* Elimina rellenos por defecto */
+}
+
+/* ====== Estilo General ====== */
+.reporte-container {
+  width: 80%;               /* Ocupa el 80% del ancho de la pantalla */
+  margin: 2rem auto;        /* Espaciado vertical y centrado horizontal */
+  font-family: Arial, sans-serif; /* Fuente sans-serif limpia */
+}
+
+.header {
+  text-align: center;       /* Centra todo el contenido dentro del header */
+  margin-bottom: 2rem;      /* Espacio inferior para separar del contenido siguiente */
+}
+
+.logo {
+  width: 100px;             /* Tamaño fijo del logo */
+  margin-bottom: 1rem;      /* Espaciado inferior debajo del logo */
+}
+
+h1 {
+  font-size: 2rem;          /* Tamaño grande del título */
+  color: var(--color-texto); /* Color oscuro definido como principal */
+}
+
+/* ====== Estilo de la Tabla ====== */
+.reporte-table {
+  width: 100%;              /* Ocupa todo el ancho del contenedor */
+  border-collapse: collapse; /* Elimina espacio entre bordes de celdas */
+  margin-top: 1rem;         /* Espacio superior respecto al título */
+}
+
+.reporte-table th, .reporte-table td {
+  padding: 1rem;            /* Espaciado interno para mejor legibilidad */
+  text-align: left;         /* Alineación del contenido a la izquierda */
+  border-bottom: 1px solid #ddd; /* Línea separadora entre filas */
+}
+
+.reporte-table th {
+  background-color: var(--color-primario); /* Fondo azul para los encabezados */
+  color: var(--color-blanco);              /* Texto blanco sobre fondo azul */
+}
+
+.reporte-table tr:hover {
+  background-color: var(--color-gris-claro); /* Efecto visual al pasar el mouse sobre una fila */
+}
+
+/* ====== Estilo para el botón de regreso alineado a la derecha ====== */
+.boton-regreso {
+  text-align: right;        /* Alinea el botón hacia la derecha del contenedor */
+  margin-top: 2rem;         /* Espacio superior respecto a la tabla */
+  margin-bottom: 0.5rem;    /* Espacio inferior ligero */
+}
+
+.boton-regreso .btn-regreso {
+  padding: 0.8rem 2rem;     /* Espaciado interno del botón */
+  font-size: 1rem;          /* Tamaño del texto del botón */
+  font-weight: 600;         /* Texto en negrita */
+  color: #fff;              /* Texto blanco */
+  background-color: var(--color-primario); /* Fondo azul */
+  border: none;             /* Sin borde */
+  border-radius: 0.55rem;   /* Bordes ligeramente redondeados */
+  cursor: pointer;          /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+.boton-regreso .btn-regreso:hover {
+  background-color: var(--color-primario-oscuro); /* Fondo más oscuro al pasar el mouse */
+  transform: translateY(-2px);  /* Efecto de levantamiento al hacer hover */
+}

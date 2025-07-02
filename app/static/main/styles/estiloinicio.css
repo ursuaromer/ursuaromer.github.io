@@ -1,0 +1,93 @@
+:root {
+    /* ====== Variables globales ====== */
+    --color-primario: #1a4b8c;              /* Azul principal */
+    --color-primario-oscuro: #0d3a6e;       /* Azul más oscuro para efectos hover */
+    --color-primario-claro: #2a6ec6;        /* Azul claro para foco */
+    --color-secundario: #f8f9fa;            /* Fondo secundario claro */
+    --color-accento: #ff6b35;               /* Naranja como color de acento */
+    --color-texto: #333;                    /* Color oscuro para textos principales */
+    --color-texto-claro: #6c757d;           /* Texto más tenue o informativo */
+    --color-blanco: #ffffff;                /* Blanco puro */
+    --color-gris-claro: #e9ecef;            /* Gris claro para bordes y fondos suaves */
+    --radio-borde: 8px;                     /* Bordes redondeados estándar */
+    --sombra-caja: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    --transicion: all 0.3s ease;            /* Transición fluida por defecto */
+}
+
+/* ====== Reset rápido ====== */
+* {
+  box-sizing: border-box;                   /* Incluye padding y borde dentro del tamaño */
+  margin: 0;                                /* Elimina márgenes predeterminados */
+  padding: 0;                               /* Elimina relleno predeterminado */
+}
+
+/* ====== Tarjeta principal ====== */
+.contenedor {
+  width: 90vw;                              /* 90% del ancho de la pantalla */
+  max-width: 400px;                         /* No excede los 400px en pantallas grandes */
+  margin: 2rem auto;                        /* Centrado con espacio superior e inferior */
+  background: var(--color-blanco);          /* Fondo blanco para la tarjeta */
+  padding: 2.5rem 3rem;                     /* Relleno interno generoso */
+  border-radius: var(--radio-borde);        /* Bordes redondeados */
+  box-shadow: var(--sombra-caja);           /* Sombra para dar profundidad */
+  text-align: center;                       /* Centra el texto */
+  display: flex;                            /* Contenedor flexible */
+  flex-direction: column;                   /* Columnas verticales */
+  align-items: center;                      /* Centra el contenido horizontalmente */
+}
+
+/* ====== Título ====== */
+.set1 h1 {
+  margin-bottom: 2rem;                      /* Espacio debajo del título */
+  font-size: 1.75rem;                       /* Tamaño de fuente grande */
+  color: var(--color-texto);                /* Color oscuro para el título */
+}
+
+/* ====== Formulario ====== */
+.formulario {
+  display: flex;                            /* Flexbox para layout vertical */
+  flex-direction: column;                   /* Acomodo en columna */
+  width: 100%;                              /* Ocupa todo el ancho disponible */
+  gap: 1.2rem;                              /* Espacio entre elementos */
+}
+
+.formulario label {
+  font-weight: 600;                         /* Texto en negrita */
+  text-align: left;                         /* Alineación a la izquierda */
+  color: var(--color-texto-claro);          /* Color gris claro */
+  margin-bottom: 0.25rem;                   /* Espacio debajo del label */
+}
+
+.formulario select,
+.formulario input {
+  width: 100%;                              /* Ancho completo */
+  padding: 0.7rem 0.85rem;                  /* Espaciado interno */
+  border: 1px solid var(--color-gris-claro); /* Borde gris claro */
+  border-radius: 0.55rem;                   /* Bordes redondeados suaves */
+  font-size: 1rem;                          /* Tamaño estándar de texto */
+  outline: none;                            /* Quita el borde azul predeterminado */
+  transition: border 0.2s;                  /* Transición suave al enfocar */
+}
+
+.formulario select:focus,
+.formulario input:focus {
+  border-color: var(--color-primario-claro); /* Borde azul claro al enfocar */
+}
+
+/* ====== Botón ====== */
+.formulario button {
+  padding: 0.8rem;                          /* Espaciado interno */
+  border: none;                             /* Sin borde */
+  border-radius: 0.55rem;                   /* Bordes redondeados */
+  font-size: 1rem;                          /* Tamaño del texto */
+  font-weight: 600;                         /* Negrita */
+  color: var(--color-blanco);               /* Texto blanco */
+  background: var(--color-primario);        /* Fondo azul */
+  cursor: pointer;                          /* Cursor de mano al pasar encima */
+  transition: background 0.25s, transform 0.15s; /* Transiciones suaves */
+}
+
+.formulario button:hover {
+  background: var(--color-primario-oscuro); /* Fondo más oscuro al hacer hover */
+  transform: translateY(-2px);              /* Efecto de "levantamiento" */
+}

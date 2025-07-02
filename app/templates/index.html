@@ -1,0 +1,84 @@
+{%extends 'global/base.html'%}
+{# Extiende la plantilla base global que probablemente contiene la estructura HTML común como <html>, <head>, etc. #}
+
+{%block title%}Inicio{%endblock%}
+{# Define el contenido del bloque "title" como "Inicio", que se mostrará en la pestaña del navegador #}
+
+{%block sections%}
+{# Inicia el bloque de contenido principal definido en la plantilla base #}
+
+<!-- Enlace a la hoja de estilos personalizada para esta página -->
+<link rel="stylesheet" href="../static/main/styles/estiloinicio.css">
+
+<!-- Contenedor principal de la sección -->
+<div class="contenedor">
+    <div class="set1">
+        <!-- Título de la sección -->
+        <h1>Reporte de Notas</h1>
+
+        <!-- ‑‑‑‑‑‑‑‑‑‑‑‑ CONSULTADOR ‑‑‑‑‑‑‑‑‑‑‑‑ -->
+        <!-- Formulario para consultar el reporte de notas -->
+        <form class="formulario" id="formulario-reporte">
+
+            <!-- Selector de ciclos académicos -->
+            <label for="ciclo">Ciclo:</label>
+            <select name="ciclo" id="ciclo" required aria-required="true">
+                <!-- Opción predeterminada deshabilitada -->
+                <option disabled selected value="">Seleccione ciclo</option>
+                <!-- Opciones disponibles -->
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+            </select>
+
+            <!-- Campo de entrada para el DNI -->
+            <label for="dni" class="dni">DNI:</label>
+            <input type="text"
+                   id="dni"
+                   name="dni"
+                   placeholder="00000000"
+                   pattern="\d{8}" 
+                   title="Ingrese un DNI válido de 8 dígitos"
+                   required aria-required="true"
+                   aria-label="Número de DNI de 8 dígitos">
+
+            <!-- Botón para ejecutar la función de validación -->
+            <a href="#" onclick="validarFormulario(); return false;">
+                <!-- Botón de tipo "button" para no enviar el formulario automáticamente -->
+                <button type="button">Consultar</button>
+            </a>
+        </form>
+
+        <!-- Script para validación del formulario -->
+        <script>
+            function validarFormulario() {
+                // Obtener los valores ingresados en el formulario
+                var dni = document.getElementById('dni').value;
+                var ciclo = document.getElementById('ciclo').value;
+
+                // Verificar si el DNI tiene exactamente 8 dígitos numéricos
+                var dniValido = /^[0-9]{8}$/.test(dni);
+                if (!dniValido) {
+                    alert("Por favor, ingrese un DNI válido de 8 dígitos.");
+                    return;
+                }
+
+                // Verificar que se haya seleccionado un ciclo
+                if (ciclo === '') {
+                    alert("Por favor, seleccione un ciclo.");
+                    return;
+                }
+
+                // Construcción dinámica de la URL con los parámetros
+                var url = "{{ url_for('report.reporte') }}?dni=" + dni + "&ciclo=" + ciclo;
+
+                // Redirige al usuario a la URL generada para mostrar el reporte
+                window.location.href = url;
+            }
+        </script>
+    </div>
+</div>
+{%endblock%}
+{# Fin del bloque de contenido principal #}
