@@ -19,3 +19,7 @@ def reporte():
         dni=dni,
         ciclo=ciclo
     )
+
+@report_bp.route('/main/reporte-de-notas/alumnacion')
+def alumnacion():
+    return render_template('main/reporte-de-notas/alumnacion.html')

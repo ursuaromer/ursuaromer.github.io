@@ -1,0 +1,42 @@
+{%extends 'global/base.html'%}
+{# Extiende la plantilla base general que se encuentra en 'global/base.html' #}
+
+{%block title%}Inicio{%endblock%}
+{# Define el título de la página como "Inicio" (se mostrará en la pestaña del navegador) #}
+
+{%block sections%}
+<title>Resumen Académico</title>
+
+  <!-- Enlace CSS CORRECTO -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/styles/alumnacion.css') }}">
+</head>
+<body>
+
+  <section class="resumen-notas">
+    <h2>Resumen Académico</h2>
+
+    <div class="metricas">
+      <div class="card-metrica aprobado">
+        <span class="num">7</span>
+        <span class="label">Cursos Aprobados</span>
+      </div>
+
+      <div class="card-metrica desaprobado">
+        <span class="num">2</span>
+        <span class="label">Cursos Desaprobados</span>
+      </div>
+
+      <div class="card-metrica creditos">
+        <span class="num">28</span>
+        <span class="label">Créditos Aprobados</span>
+      </div>
+    </div>
+
+    <div class="botones-resumen">
+      <a href="{{ url_for('main.index') }}">
+        <button type="button" class="btn-resumen">Volver al Inicio</button>
+      </a>
+    </div>
+  </section>
+
+{%endblock%}

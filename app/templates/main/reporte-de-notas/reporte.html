@@ -5,106 +5,132 @@
 {# Define el título de la página como "Inicio" (se mostrará en la pestaña del navegador) #}
 
 {%block sections%}
-<!-- Inicio del cuerpo de la página -->
-<body>
+ <title>Reporte Académico</title>
 
-    <!-- Enlace al archivo CSS personalizado para esta página -->
-    <link rel="stylesheet" href="../static/main/styles/pagina.css">
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="../static/main/styles/pagina.css" />
+  </head>
 
+  <body>
     <!-- Contenedor principal del reporte -->
-    <div class="reporte-container">
+    <main class="reporte-container">
 
-        <!-- Encabezado con el logo y título -->
-        <div class="header">
-            <img src="../static/main/assets/img/logo-dsi.png" alt="Logo del Sistema DSI" class="logo">
-            <!-- Imagen del logo del sistema DSI -->
-            <h1>Reporte de Alumnos</h1> <!-- Título de la sección -->
-        </div>
+      <!-- Cabecera: Logo + Título -->
+      <header class="header">
+        <img
+          src="../static/main/assets/img/logo-dsi.png"
+          alt="Logo del Sistema DSI"
+          class="logo"
+        />
+        <h1>Reporte Académico</h1>
+      </header>
 
-        <!-- Contenido principal del reporte -->
-        <div class="reporte-content">
+      <!-- Sección: Información del alumno -->
+      <section class="datos-alumno">
+        <h2>Datos del Alumno</h2>
+        <ul>
+          <li><strong>Nombre:</strong> Juan Pérez Gonzales</li>
+          <li><strong>DNI:</strong> 71234567</li>
+          <li><strong>Ciclo:</strong> III</li>
+          <li><strong>Área:</strong> Desarollo De Sistemas</li>
+        </ul>
+      </section>
 
-            <!-- Tabla que contiene los datos de los alumnos -->
-            <table class="reporte-table">
-                <thead>
-                    <tr>
-                        <!-- Encabezados de la tabla -->
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Ciclo</th>
-                        <th>Nota 1</th>
-                        <th>Nota 2</th>
-                        <th>Nota 3</th>
-                        <th>Promedio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Filas de ejemplo con datos estáticos -->
+      <!-- Sección: Tabla de cursos y calificaciones -->
+<section class="reporte-content">
+  <h2>Cursos y Calificaciones</h2>
+  <table class="reporte-table">
+    <thead>
+      <tr>
+        <th>Curso</th>
+        <th>Nota 1</th>
+        <th>Nota 2</th>
+        <th>Nota 3</th>
+        <th>Promedio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Algoritmos y Estructuras de Datos</td>
+        <td>16</td>
+        <td>15</td>
+        <td>18</td>
+        <td>16.3</td>
+      </tr>
+      <tr>
+        <td>Programación Orientada a Objetos</td>
+        <td>17</td>
+        <td>18</td>
+        <td>16</td>
+        <td>17.0</td>
+      </tr>
+      <tr>
+        <td>Matemática Discreta</td>
+        <td>14</td>
+        <td>16</td>
+        <td>15</td>
+        <td>15.0</td>
+      </tr>
+      <tr>
+        <td>Base de Datos I</td>
+        <td>18</td>
+        <td>17</td>
+        <td>18</td>
+        <td>17.7</td>
+      </tr>
+      <tr>
+        <td>Sistemas Operativos</td>
+        <td>16</td>
+        <td>14</td>
+        <td>17</td>
+        <td>15.7</td>
+      </tr>
+      <tr>
+        <td>Redes de Computadoras</td>
+        <td>15</td>
+        <td>16</td>
+        <td>14</td>
+        <td>15.0</td>
+      </tr>
+      <tr>
+        <td>Arquitectura de Computadoras</td>
+        <td>14</td>
+        <td>13</td>
+        <td>15</td>
+        <td>14.0</td>
+      </tr>
+      <tr>
+        <td>Ingeniería de Software I</td>
+        <td>17</td>
+        <td>18</td>
+        <td>17</td>
+        <td>17.3</td>
+      </tr>
+      <tr>
+        <td>Ética Profesional</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>19.0</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-                    <tr>
-                        <td>001</td>
-                        <td>Juan Pérez</td>
-                        <td>III</td>
-                        <td>16</td>
-                        <td>14</td>
-                        <td>18</td>
-                        <td>16.0</td> <!-- (16 + 14 + 18) / 3 -->
-                    </tr>
 
-                    <tr>
-                        <td>002</td>
-                        <td>Ana Gómez</td>
-                        <td>II</td>
-                        <td>18</td>
-                        <td>17</td>
-                        <td>19</td>
-                        <td>18.0</td> <!-- (18 + 17 + 19) / 3 -->
-                    </tr>
+      <!-- Botón de navegación -->
+<div class="boton-navegacion">
+  <a href="{{ url_for('main.index') }}">
+    <button type="button" class="btn">Volver al Inicio</button>
+  </a>
 
-                    <tr>
-                        <td>003</td>
-                        <td>Carlos Díaz</td>
-                        <td>I</td>
-                        <td>14</td>
-                        <td>16</td>
-                        <td>13</td>
-                        <td>14.33</td> <!-- (14 + 16 + 13) / 3 -->
-                    </tr>
+<a href="{{ url_for('report.alumnacion') }}">
+  <button type="button" class="btn">Siguiente Página</button>
+</a>
 
-                    <tr>
-                        <td>004</td>
-                        <td>Laura Martínez</td>
-                        <td>IV</td>
-                        <td>17</td>
-                        <td>19</td>
-                        <td>18</td>
-                        <td>18.0</td> <!-- (17 + 19 + 18) / 3 -->
-                    </tr>
-
-                    <tr>
-                        <td>005</td>
-                        <td>Pedro Ruiz</td>
-                        <td>V</td>
-                        <td>19</td>
-                        <td>18</td>
-                        <td>17</td>
-                        <td>18.0</td> <!-- (19 + 18 + 17) / 3 -->
-                    </tr>
-
-                </tbody>
-            </table>
-        </div> <!-- Fin de reporte-content -->
-    </div> <!-- Fin de reporte-container -->
-
-    <!-- Botón para volver al inicio -->
-    <div class="boton-regreso">
-        <a href="{{ url_for('main.index') }}">
-            <!-- Llama a la función 'main.index' en Flask para volver al inicio -->
-            <button type="button" class="btn-regreso">Volver al Inicio</button>
-        </a>
-    </div>
-
-</body>
+</div>
+    </main>
+  </body>
 {%endblock%}
 
 
